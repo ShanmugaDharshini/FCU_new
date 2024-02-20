@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un-Assigned</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+        <div class="row">
+        
+         <div class="header-box">
+         <div class="col-6">
+         <div class="logo">
+          <img src="logo.jpg" alt="Logo" height="40" width="40">
+        
+         </div>
+         </div>
+         <div class="col-6">
+            <div class="row justify-content-end">
+                
+                  <div class="right-section">
+                    <div class="col-auto">
+                   <div class="search-bar">
+                     <input type="text" placeholder="Search here Lead ID/ Branch/ Customer Details">
+          
+                   </div>
+                   </div>
+                   <div class="col-auto">
+                   <div class="bell-icon">
+                    <i class="fa-solid fa-bell" style="font-size: 24px;"></i>
+                    </div>
+                    </div>
+                    <div class="col-auto">
+                  <div class="login-user">
+                   <i class="fa-solid fa-user" style="font-size: 24px;"></i>
+                  </div>
+                 </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                 <div class="section1">
+                 <h4>Credit Tray - 11082 Total Requests</h4>
+        
+                <div class="dropdown">
+                 <button class="dropbtn">All Branches <i class="fas fa-chevron-down"></i></button>
+                 <div class="dropdown-content">
+                 <a href="#">Branch 1</a>
+                 <a href="#">Branch 2</a>
+                 <a href="#">Branch 3</a>
+                </div>
+             </div>
+            <div class="box-container">
+            <div class="box">
+                <h5>1D</h5>
+                <h5>1W</h5>
+                <h5>1M</h5>
+                <h5>3M</h5>
+            </div>
+            <div class="date">
+                <input type="date">
+            </div>
+    
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                <div class="section2">
+                <div class="insights">
+                <!--unassigned start-->
+                
+                <div class="clickable-div un-assigned" onclick="changeContent('un-assigned')">
+                    <div class="middle">
+                        <div class="left">
+                            <h5>Un Assigned</h5>
+                            <h1>2</h1>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="color-column"></div> 
+                 </div>
+                <!--end un-assigned-->
+                <!--start inprogress-->
+                
+                <div class="clickable-div in-progress" onclick="changeContent('in-progress')">
+                    <div class="progress-details">
+                    <div class="middle">
+                        <div class="left">
+                            <h5>In Progress</h5>
+                            <h1>242</h1>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-spinner"></i> 
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!--end in-progress-->
+                <!--start queries-->
+                <div class="clickable-div queries" onclick="changeContent('queries')">
+                    <div class="middle">
+                        <div class="left">
+                            <h5>Queries</h5>
+                            <h1>0</h1>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-question"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--end queries-->
+                 <!--start queries-->
+                 <div class="clickable-div rejected" onclick="changeContent('rejected')">
+                    <div class="middle">
+                        <div class="left">
+                            <h5>Rejected</h5>
+                            <h1>730</h1>
+                        </div>
+                        <div class="right">
+                        <i class="fas fa-times-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--end queries-->
+                 <!--start queries-->
+                 <div class="clickable-div history" onclick="changeContent('history')">
+                    <div class="middle">
+                        <div class="left">
+                            <h5>History</h5>
+                            <h1>10110</h1>
+                        </div>
+                        <div class="right">
+                            <i class="fas fa-history"></i>
+                    </div>
+                </div>
+                </div>
+                <!--end queries-->
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="section-3">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active gray-tab" id="tab1" data-bs-toggle="tab" data-bs-target="#content1" type="button" role="tab" aria-controls="content1" aria-selected="true">Non-STP</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link red-tab" id="tab2" data-bs-toggle="tab" data-bs-target="#content2" type="button" role="tab" aria-controls="content2" aria-selected="false">PAL(14)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link red-tab" id="tab3" data-bs-toggle="tab" data-bs-target="#content3" type="button" role="tab" aria-controls="content3" aria-selected="false">Triggered</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link gray-tab" id="tab4" data-bs-toggle="tab" data-bs-target="#content4" type="button" role="tab" aria-controls="content4" aria-selected="false">Hold(228)</button>
+                            </li>
+                        </ul>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                                <div class="loan-details">
+                                    <div class="container">
+                                        <div class="table-container">
+                                            <div class="table-row table-heading">
+                                                <div class="table-cell">Branch</div>
+                                                <div class="table-cell">Lead ID</div>
+                                                <div class="table-cell">Date Assigned</div>
+                                                <div class="table-cell">TAT</div>
+                                                <div class="table-cell">Full Name</div>
+                                                <div class="table-cell">Loan Amount</div>
+                                                <div class="table-cell">Status</div>
+                                                <div class="table-cell"></div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">Mangalore</div>
+                                                <div class="table-cell">D2C20240213161640352993</div>
+                                                <div class="table-cell">13-Feb-2024 05:12:35 PM</div>
+                                                <div class="table-cell">0Minute</div>
+                                                <div class="table-cell">KESHAVA AJEY</div>
+                                                <div class="table-cell">&#x20B9;2,09,000</div>
+                                                <div class="table-cell">Inprogress</div>
+                                                <div class="table-cell"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">Haldwani CSEL</div>
+                                                <div class="table-cell">D2C20240208164045372364</div>
+                                                <div class="table-cell">13-Feb-2024 05:00:46 PM</div>
+                                                <div class="table-cell">12Minute</div>
+                                                <div class="table-cell">BALBIR SINGH</div>
+                                                <div class="table-cell">&#x20B9;2,91,000</div>
+                                                <div class="table-cell">Inprogress</div>
+                                                <div class="table-cell"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">Karad CSEL</div>
+                                                <div class="table-cell">D2C20240213163110922373</div>
+                                                <div class="table-cell">13-Feb-2024 04:56:45 PM</div>
+                                                <div class="table-cell">16Minute</div>
+                                                <div class="table-cell">DATTATRAY KASHINATH HIVARE</div>
+                                                <div class="table-cell">&#x20B9;37000</div>
+                                                <div class="table-cell">Inprogress</div>
+                                                <div class="table-cell"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">Chennai Anna Salai</div>
+                                                <div class="table-cell">D2C20240213164625597743</div>
+                                                <div class="table-cell">13-Feb-2024 04:53:50 PM</div>
+                                                <div class="table-cell">19Minute</div>
+                                                <div class="table-cell">SRIRAM MADRAS RENGARAJAN</div>
+                                                <div class="table-cell">&#x20B9;3,00,000</div>
+                                                <div class="table-cell">Inprogress</div>
+                                                <div class="table-cell"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">Cochin</div>
+                                                <div class="table-cell">D2C20240213163258801</div>
+                                                <div class="table-cell">13-Feb-2024 04:51:34 PM</div>
+                                                <div class="table-cell">21Minute</div>
+                                                <div class="table-cell">JOMON KAITHAKKOTTIL BABY</div>
+                                                <div class="table-cell">&#x20B9;2,02,000</div>
+                                                <div class="table-cell">Inprogress</div>
+                                                <div class="table-cell"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">Pune</div>
+                                                <div class="table-cell">D2C20240213163420137475</div>
+                                                <div class="table-cell">13-Feb-2024 04:39:38 PM</div>
+                                                <div class="table-cell">33Minute</div>
+                                                <div class="table-cell">DHANISHTHA KUNJAN DHUMAL</div>
+                                                <div class="table-cell">&#x20B9;2,44,000</div>
+                                                <div class="table-cell">Inprogress</div>
+                                                <div class="table-cell"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                    
+                                                
+                            
+                            </div>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                                <h1>PAL(14)</h1>
+                                <p>This has some content related to PAL(14)</p>
+                            </div>
+                            <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
+                                <h1>Triggered</h1>
+                                <p>This has some content related to Triggered</p>
+                            </div>
+                            <div class="tab-pane fade" id="content4" role="tabpanel" aria-labelledby="tab4">
+                                <h1>Hold(228)</h1>
+                                <p>This has some content related to Hold(228)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           
+    
+        
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script>
+   document.querySelectorAll('.nav-link').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+        var target = this.getAttribute('data-bs-target');
+        document.querySelectorAll('.tab-pane').forEach(function(tabPane) {
+            tabPane.classList.remove('active', 'show');
+        });
+        document.querySelector(target).classList.add('active', 'show');
+    });
+});
+    function changeContent(className) {
+    // Get the URL based on the class name or any other logic
+     
+
+     // Add more colors for other classes as needed
+     var url;
+    switch (className) {
+        case 'un-assigned':
+            url = 'unassigned.html'; // Replace 'unassigned.html' with the URL you want to redirect to
+            break;
+        case 'in-progress':
+            url = 'inprogress.html'; // Replace 'inprogress.html' with the URL you want to redirect to
+            break;
+        case 'queries':
+            url = 'queries.html'; // Replace 'queries.html' with the URL you want to redirect to
+            break;
+        case 'rejected':
+            url = 'rejected.html'; // Replace 'rejected.html' with the URL you want to redirect to
+            break;
+        case 'history':
+            url = 'history.html'; // Replace 'history.html' with the URL you want to redirect to
+            break;
+        default:
+            url = 'default.html'; // Replace 'default.html' with the default URL you want to redirect to
+            break;
+    }
+
+    // Redirect to the URL
+    window.location.href = url;
+}
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"  href="style.css">
+ 
+</head>
+<body>
+
+<div class="container">
+    <div class="content-container">
+    <span class="border-top-0">
+    <div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="mt-4">
+      <div class="login-form-container">
+        <h1 class="text-left">Login</h1>
+        <form id="loginForm">
+            <p id="message" class="text-left">Enter your credential to access your account</p>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username here" >
+            
+            <span id="usernameError" style="color: red;"></span>
+            
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password here" >
+                <button type="button" class="btn btn-outline-secondary" id="togglePassword">Show</button>
+   
+            </div>
+            <span id="passwordError" style="color:red;"></span>
+        </div>
+        
+          <!--<p id="message1" class="text-left">Forgot Password?</p> -->
+          <a href="forgotpassword">Forgot Password?</a>
+          <br>
+          <br>
+          
+          <button type="submit" class="btn btn-primary btn-darkblue d-block mx-auto col-md-12">Login</button>
+
+        </form>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  </span>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // Function to validate username
+    function validateUsername() {
+        var username = document.getElementById('username').value.trim();
+        var usernameError = document.getElementById('usernameError');
+        if (username === '') {
+            usernameError.textContent = 'Please fill username.';
+            usernameError.style.color = 'red'; // Set error message color to red
+            return false;
+        } else if (!/^[a-zA-Z]+$/.test(username)) {
+            usernameError.textContent = 'Username must contain only alphabets.';
+            return false;
+        } else {
+            usernameError.textContent = ''; // Clear error message
+            return true;
+        }
+    }
+    
+    // Function to validate password
+    function validatePassword() {
+        var password = document.getElementById('password').value.trim();
+        var passwordError = document.getElementById('passwordError');
+        if (password === '') {
+            passwordError.textContent = 'Please fill password.';
+            passwordError.style.color = 'red'; // Set error message color to red
+            return false;
+        } else if (password.length < 6) {
+            passwordError.textContent = 'Password must be at least 6 characters long.';
+            return false;
+        } else if (!/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/\d/.test(password) || !/[^a-zA-Z0-9]/.test(password)) {
+            passwordError.textContent = 'Password must contain at least one uppercase letter, one lowercase letter, one special character, and one number.';
+            return false;
+        } else {
+            passwordError.textContent = ''; // Clear error message
+            return true;
+        }
+    }
+    
+    // Add event listeners for dynamic validation
+    document.getElementById('username').addEventListener('input', validateUsername);
+    document.getElementById('password').addEventListener('input', validatePassword);
+    
+    // Add event listener for form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Validate username and password
+        var isUsernameValid = validateUsername();
+        var isPasswordValid = validatePassword();
+    
+        // If both username and password are valid, submit the form
+        if (isUsernameValid && isPasswordValid) {
+            // Clear form fields and error messages
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+    
+            // Display alert message for successful submission
+            window.location.href='dashboard.html'
+        }
+    });
+    // Show/Hide password button functionality
+// Toggle password visibility
+const togglePasswordButton = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+togglePasswordButton.addEventListener('click', function() {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        togglePasswordButton.textContent = 'Hide';
+    } else {
+        passwordInput.type = 'password';
+        togglePasswordButton.textContent = 'Show';
+    }
+});
+
+
+
+    </script>
+    
+</body>
+</html>

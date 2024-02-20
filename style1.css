@@ -1,0 +1,706 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define root variables */
+
+:root {
+    --clr-primary: #06127d;
+    --clr-danger: #e62031;
+    --clr-success: #d4f710;
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warning: #7653f3;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #f6f6f9;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+/* Body and font styling */
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+
+.header-box {
+    border: 2px solid #f1f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the search bar to the right */
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    background-color: rgba(191, 204, 234, 0.904);
+    color: black;
+    width: 350px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.bell-icon {
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+/* Main content styling */
+
+main {
+    margin-top: 1.4rem;
+    margin-left: 1.2rem;
+    width: auto;
+}
+.main-content {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.section1 {
+    display: flex;
+    align-items: center;
+}
+
+main .section1 .h4 {
+    color: black;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Dropdown styling */
+
+.dropdown {
+    margin-top: -1px;
+    margin-left: 200px; /* Push dropdown to the right */
+    margin-right: 20px; /* Add space to the right */
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    margin-left: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropbtn i {
+    margin-left: 5px;
+}
+
+/* Date input styling */
+
+.date {
+    margin-left: 25px;
+}
+
+/* Box styling */
+
+.box-container {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    background-color: #f1f1f1;
+    margin-right: 10px; /* Add margin around the box */
+}
+
+.box h5 {
+    margin-right: 10px;
+}
+
+main .insights{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:1.3rem;
+}
+main .insights>div{
+    background-color:var(--clr-white);
+    padding:var(--card-padding);
+    border-radius: 15px;
+    margin-top:1rem;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+}
+main .insights > div :hover{
+    box-shadow: none;
+}
+
+
+main .insights > div .middle{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+main .insights > div .middle h1{
+    font: size 26px;
+
+}
+.un-assigned ::after{
+    /* Border color */
+ content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 5px; 
+  background-color: var(--clr-dark-variant);
+}
+
+/* Specific styles for each div */
+.un-assigned .middle {
+    /* Border color */
+    color: var(--clr-dark-variant); /* Text color */
+}
+
+.in-progress .middle{
+   /* background-color: var(--clr-primary-variant);*/
+    color: var(--clr-primary-variant);
+}
+
+.queries .middle {
+    
+    color: var(--clr-warning);
+}
+
+.rejected .middle {
+    
+    color: var(--clr-danger);
+}
+
+.history .middle {
+
+    color: var(--clr-success);
+}
+/* Icon styling */
+.un-assigned .right i {
+    margin-left:25px;
+    margin-right: 5px; /* Adjust the space between icon and text */
+    margin-top:20px;
+    font-size: 24px; /* Adjust icon size */
+    color:var(--clr-dark-variant); /* Adjust icon color */
+}
+.in-progress .right i {
+    margin-left:25px;
+    margin-right: 5px;
+    margin-top:20px; /* Adjust the space between icon and text */
+    font-size: 24px; /* Adjust icon size */
+    color:var(--clr-primary-variant); /* Adjust icon color */
+}
+.queries .right i {
+    margin-left:25px;
+    margin-right: 5px; /* Adjust the space between icon and text */
+    margin-top:20px;
+    font-size: 24px; /* Adjust icon size */
+    color:var(--clr-warning); /* Adjust icon color */
+}
+.rejected .right i {
+    margin-left:25px;
+    margin-right: 5px; /* Adjust the space between icon and text */
+    margin-top:20px;
+    font-size: 24px; /* Adjust icon size */
+    color:var(--clr-danger); /* Adjust icon color */
+}
+.history .right i {
+    margin-left:25px;
+    margin-right: 5px; /* Adjust the space between icon and text */
+    margin-top:20px;
+    font-size: 24px; /* Adjust icon size */
+    color:var(--clr-success); /* Adjust icon color */
+}
+.section2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.un-assigned {
+    border-left: 15px solid var(--clr-dark-variant); /* Red color */
+}
+
+.in-progress {
+    border-left: 15px solid var(--clr-primary-variant) /* Green color */
+}
+
+.queries {
+    border-left: 15px solid var(--clr-warning); /* Blue color */
+}
+
+.rejected {
+    border-left: 15px solid var(--clr-danger); /* Orange color */
+}
+
+.history {
+    border-left: 15px solid var(--clr-success) /* Purple color */
+}
+
+.clickable-div {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.clickable-div.active.un-assigned{
+    background-color: #363949;
+}
+
+.clickable-div.active h5,
+.clickable-div.active h1,
+.clickable-div.active i {
+    color: white;
+}
+
+
+/* Additional styles for the clickable divs */
+.clickable-div {
+    padding-left: 15px; /* Adjust for the width of colored border */
+    margin-bottom: 10px; /* Add margin between divs */
+}
+.clickable-div .active .un-assigned{
+    background-color: var(--clr-dark-variant);
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left h5 {
+    margin-bottom: 0;
+}
+
+.right i {
+    font-size: 24px;
+}
+
+
+/* Additional styles for the content of the clickable divs */
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle h5 {
+    margin: 0;
+}
+
+.middle h1 {
+    margin: 0;
+}
+
+/* Define styles for the clickable divs when hovered */
+.clickable-div:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+
+.tabs {
+    display: flex;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    margin-top:20px;
+    margin-right: 10px;
+    background-color: #2417d8ac;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #007bff; /* Active tab color */
+    color: #e4dede53; /* Text color for active tab */
+  }
+  .tab-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-pane {
+    flex: 1;
+    margin-right: 10px; /* Adjust margin as needed */
+    margin-top:10px;
+}
+  
+
+  .custom-red {
+    color: red; /* Text color for custom red tabs */
+  }
+  main .loan-details{
+    margin-top:2rem;
+}
+main .loan-details h2{
+     color:var(--clr-dark);
+}
+main .loan-details table{
+    background-color: var(--clr-white);
+    width:100%;
+    border-radius: var(--card-border-radius);
+    padding:var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition:all .3s ease;
+    color:var(--clr-dark);
+
+}
+main .loan-details table:hover{
+    box-shadow: none;
+}
+main table tbody tr{
+    height:3.8rem;
+    border-bottom: 1px solid var(--clr-white);
+    color:var(--clr-dark-variant);
+
+}
+main table tbody td{
+    height:3.8rem;
+    border-bottom:1px solid var(--clr-dark);
+}
+main table tbody tr:last-child td{
+    border:none;
+
+}
+main .loan-details a{
+    text-align:center;
+    display:block;
+    margin:1rem;
+}  
+.gray-tab{
+    background-color:white;
+    color:gray;
+}
+.red-tab{
+    background-color:white;
+    color:red;
+}
+.nav-tabs .nav-link.gray-tab:hover,
+.nav-tabs .nav-link.red-tab:hover {
+    background-color: initial;
+    color:initial;
+}
+/* Adjust table headings */
+.table-container{
+    display: flex;
+    flex-direction:column;
+}
+.table-row{
+    display:flex;
+    flex-direction:row;
+    border:1px solid #ccc;
+    position:relative;
+}
+.table-row:not(.table-heading)::before {
+    content: "";
+    width: 10px; /* Adjust the width as needed */
+    background-color: #097531; /* Specify the desired color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.table-cell{
+    flex:1;
+    padding:10px;
+    text-align: center;
+}
+.table-heading{
+    background-color: #007bff;
+    color:white;
+    border-radius: 20px;
+    font-weight:bold;
+}
+.table-row:not(:first-child){
+    margin-top:5px;
+    border-radius:20px;
+}
+.table-cell:nth-child(1),
+.table-cell:nth-child(2),
+.table-cell:nth-child(3),
+.table-cell:nth-child(4),
+.table-cell:nth-child(5),
+.table-cell:nth-child(6),
+.table-cell:nth-child(7),
+.table-cell:nth-child(8),
+.table-cell:nth-child(9){
+    
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.table-cell:nth-child(1),
+.table-cell:nth-child(5),
+.table-cell:nth-child(6) {
+    flex-basis: calc(25%);
+    max-width: calc(25%);
+}
+.table-cell:nth-child(2),
+.table-cell:nth-child(3),
+.table-cell:nth-child(4) {
+    flex-basis: calc(20%);
+    max-width: calc(20%);
+}
+.table-cell:nth-child(7),
+.table-cell:nth-child(8),
+.table-cell:nth-child(9) {
+    flex-basis: calc(10%);
+    max-width: calc(10%);
+}
+
+
+/* Add your existing CSS styles here */
+
+/* Media query for tablets */
+/* Add your existing CSS styles here */
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Adjust the styles for tablets here */
+
+    /* Example: Adjust the layout of the header */
+    .header-box {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: 200px; /* Example width */
+    }
+
+    /* Example: Adjust the layout of section1 */
+    .section1 {
+        margin-bottom: 20px;
+    }
+
+    /* Example: Adjust the layout of section2 */
+    .section2 {
+        margin-top: 20px;
+    }
+
+    /* Example: Adjust the layout of box-container */
+    .box-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Example: Adjust the layout of dropdown */
+    .dropdown-content {
+        width: 150px;
+    }
+
+    /* Example: Adjust the layout of clickable-div */
+    .clickable-div {
+        width: calc(25% - 20px); /* Adjust based on the number of clickable divs */
+        margin-bottom: 20px;
+    }
+
+    /* Example: Adjust the layout of tab-pane */
+    .tab-pane {
+        padding: 20px;
+    }
+
+    /* Example: Adjust the layout of the table */
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    /* Example: Adjust the layout of the table header */
+    .table-header th {
+        padding: 10px;
+    }
+
+    /* Example: Adjust the layout of the table body */
+    table tbody td {
+        padding: 10px;
+    }
+
+    /* Example: Adjust the layout of the row-4 div */
+    .row-4 {
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #dee2e6; /* Add a border for clarity */
+        margin-bottom: 10px;
+    }
+
+    /* Adjust other styles as needed */
+}
+
+
+
+/* CSS for mobile devices */
+@media only screen and (max-width: 767px) {
+    /* Adjustments for smaller screens */
+  
+    /* Header */
+    .header-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .col-6 {
+      flex: 1;
+      text-align: center;
+    }
+  
+    /* Logo */
+    .logo img {
+      height: 30px;
+      width: 30px;
+    }
+  
+    /* Right Section */
+    .right-section {
+      display: flex;
+      align-items: center;
+    }
+  
+    .search-bar input {
+      width: 100%;
+      padding: 5px;
+    }
+  
+    /* Main Content */
+    .main-content {
+      padding: 10px;
+    }
+  
+    /* Section 1 and Section 2 */
+    .section1,
+    .section2 {
+      margin-bottom: 20px;
+    }
+  
+    /* Dropdown */
+    .dropbtn {
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    /* Box Container */
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .box {
+      display: flex;
+      justify-content: space-between;
+      flex-basis: 45%;
+      margin-bottom: 10px;
+    }
+  
+    .date {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .date input {
+      width: 100%;
+    }
+  
+    /* Section 3 */
+    .section-3 {
+      margin-bottom: 20px;
+    }
+  
+    /* Loan Details Table */
+    .loan-details table {
+      width: 100%;
+      overflow-x: auto;
+      font-size: 12px;
+    }
+  
+    /* Loan Details Table Headers */
+    .loan-details th {
+      white-space: nowrap;
+    }
+  
+    /* Loan Details Table Rows */
+    .loan-details td {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  
+    /* Clickable Divs */
+    .clickable-div {
+      margin-bottom: 10px;
+    }
+  }
+
+

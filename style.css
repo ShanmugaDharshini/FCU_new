@@ -1,0 +1,163 @@
+.content-container{
+    position:relative;
+    top:5px;
+    left:50px;
+}
+
+.login-form-container {
+    margin-top:50px;
+    margin: 20px auto 0;
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+}
+
+.login-heading{
+    margin-bottom:20px;
+    
+}
+.form-group{
+    margin-bottom:20px;
+}
+#showPassword {
+    background-image: none; /* Remove default eye symbol background image */
+    padding-right: 0.5rem; /* Adjust padding for text alignment */
+  }
+  /* Remove default browser styling for password input */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none;
+}
+
+#message1{
+    color:blue;
+}
+.btn-primary{
+    width:100%;
+}
+.btn-darkblue {
+    background-color: #00008B !important; /* Dark blue color */
+    border-color: #00008B !important; /* Dark blue color */
+}
+
+.btn-darkblue:hover,
+.btn-darkblue:active {
+    background-color: #00008B !important; /* Dark blue color */
+    border-color: #00008B !important; /* Dark blue color */
+}
+
+/* CSS for laptops and desktops */
+
+  
+  /* CSS for tablets */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        /* Adjustments for tablet screens */
+      
+        /* Content Container */
+        .content-container {
+          position: static; /* Reset position */
+          top: auto; /* Reset top position */
+          left: auto; /* Reset left position */
+          margin-top: 20px; /* Adjust margin top */
+          margin-left: auto; /* Center the content horizontally */
+          margin-right: auto; /* Center the content horizontally */
+        }
+      
+        /* Login Form Container */
+        .login-form-container {
+          margin-top: 20px; /* Adjust margin top */
+          margin-bottom: 20px; /* Adjust margin bottom */
+        }
+      
+        /* Login Heading */
+        .login-heading {
+          margin-bottom: 10px; /* Decrease margin bottom */
+          font-size: 24px; /* Decrease font size */
+        }
+      
+        /* Form Group */
+        .form-group {
+          margin-bottom: 15px; /* Decrease margin bottom */
+        }
+      
+        /* Toggle Password Button */
+        #togglePassword {
+          margin-left: 5px; /* Adjust margin left */
+        }
+      
+        /* Message 1 */
+        #message1 {
+          font-size: 16px; /* Decrease font size */
+        }
+      
+        /* Primary Button */
+        .btn-primary {
+          width: 100%; /* Make button full width */
+        }
+      
+        /* Dark Blue Button */
+        .btn-darkblue {
+          width: 100%; /* Make button full width */
+        }
+      
+        .btn-darkblue:hover,
+        .btn-darkblue:active {
+          /* No changes needed */
+        }
+      }
+      
+      
+    /* CSS for mobile phones */
+  @media only screen and (max-width: 767px) {
+    /* Adjustments for smaller screens */
+  
+    /* Container */
+    .container {
+      padding: 10px;
+    }
+  
+    /* Content Container */
+    .content-container {
+      margin-top: 20px;
+    }
+  
+    /* Login Form Container */
+    .login-form-container {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+  
+    /* Login Form Heading */
+    .login-form-container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    /* Input fields */
+    .form-control {
+      margin-bottom: 15px;
+    }
+  
+    /* Button */
+    .btn-primary {
+      width: 100%;
+    }
+  
+    /* Toggle password button */
+    #togglePassword {
+      display: block;
+      margin-top: 10px;
+    }
+  
+    /* Error messages */
+    span[id$="Error"] {
+      font-size: 14px;
+    }
+  }
+  
+
+
+
